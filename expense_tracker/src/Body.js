@@ -3,15 +3,21 @@ import Expenses from "./Expenses";
 
 const Body = ({ active }) => {
   return (
-    <div class="layout-container">
+    <div className="layout-container">
       {active === 0 ? (
         <Expenses></Expenses>
       ) : active === 1 ? (
-        <div>Add</div>
+        <div className="layout-container__wrapper">
+          <p>Add</p>
+        </div>
       ) : active === 2 ? (
-        <div>Analytics</div>
+        <div className="layout-container__wrapper">
+          <p>Analytics</p>
+        </div>
       ) : (
-        <p>Page not Found</p>
+        <div className="layout-container__wrapper">
+          <p>Page not Found</p>
+        </div>
       )}
     </div>
   );

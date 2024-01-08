@@ -9,7 +9,7 @@ function App() {
     setActive(arg);
   };
   return (
-    <div className="flexbox">
+    <div classNameName="flexbox">
       <SideBar active={active} activeHandler={activeHandler}></SideBar>
       <Body active={active}></Body>
     </div>

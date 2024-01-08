@@ -4,9 +4,9 @@ import Sections from "./Section";
 const Body = () => {
   const a = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="i">
+    <div classNameName="i">
       <Sections></Sections>
-      <section class="cardSection">
+      <section className="cardSection">
         {a.map((e) => (
           <Card key={e}></Card>
         ))}

@@ -1,9 +1,9 @@
 const Sections = () => {
   return (
-    <section class="container">
+    <section className="container">
       <h1>Album example</h1>
 
-      <p class="a">
+      <p className="a">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
         doloribus provident sunt repellendus quo error facilis, ut qui nostrum
         eos assumenda accusantium obcaecati quos quis ipsam! Beatae nihil

@@ -1,12 +1,12 @@
 const Card = () => {
   return (
-    <div class="card">
-      <div class="thumbnail">thumbnail</div>
+    <div className="card">
+      <div className="thumbnail">thumbnail</div>
       <p>
         This is a wider card with supporting text below as a natural lead-in to
         additional content. This content is a little bit longer.
       </p>
-      <div class="buttons">
+      <div className="buttons">
         <div>
           <button>View</button>
           <button>Edit</button>

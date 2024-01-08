@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Value from "./Value";
 import ButtonHandler from "./Buttonhandler";
 
 const Counter = () => {
   const [value, setValue] = useState(0);
   const updater = (arg) => {
-    console.log(arg);
     setValue(arg);
   };
+  useEffect(() => {
+    // http calls
+    let timer;
+    if (value < 0) {
+      timer = setTimeout(() => {
+        setValue(0);
+      }, 2000);
+    }
+    return () => {
+      clearTimeout(timer);
+    };
+    console.log("MERN");
+  }, [value]);
 
   return (
-    <div className="a">
+    <div classNameName="a">
       <Value value={value}></Value>
-      {value >= 0 ? null : <p>Negative Value</p>}
+      {/* {value >= 0 ? null : <p>Negative Value</p>} */}
       <div>
         <ButtonHandler
           FunctionName={"HandleIncrement"}

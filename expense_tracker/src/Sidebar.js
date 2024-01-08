@@ -1,32 +1,63 @@
 import SideBarListItem from "./SideBarListitem";
 
 const SideBar = ({ active, activeHandler }) => {
+  const sideBarOption = [
+    {
+      id: 0,
+      iconName: "insights",
+      pillName: "Expenses",
+      activeclassName: `${active === 0 ? "active" : ""}`,
+    },
+    {
+      id: 1,
+      iconName: "note_add",
+      pillName: "Add Expenses",
+      activeclassName: `${active === 1 ? "active" : ""}`,
+    },
+    {
+      id: 2,
+      iconName: "analytics",
+      pillName: "analytics",
+      activeclassName: `${active === 2 ? "active" : ""}`,
+    },
+  ];
   return (
-    <div class="sidebar-container">
-      <div class="sidebar-container__brand">Expense Tracker</div>
-      <div class="sidebar-container__list">
+    <div className="sidebar-container">
+      <div className="sidebar-container__brand">Expense Tracker</div>
+      <div className="sidebar-container__list">
         <ul>
-          <SideBarListItem
+          {sideBarOption.map((e) => {
+            return (
+              <SideBarListItem
+                id={e.id}
+                iconName={e.iconName}
+                pillName={e.pillName}
+                activeclassName={e.activeclassName}
+                activeHandler={activeHandler}
+              ></SideBarListItem>
+            );
+          })}
+          {/* <SideBarListItem
             id={0}
             iconName={"insights"}
             pillName={"Expenses"}
-            activeClass={active === 0 ? "active" : ""}
+            activeclassName={active === 0 ? "active" : ""}
             activeHandler={activeHandler}
           ></SideBarListItem>
           <SideBarListItem
             id={1}
             iconName={"note_add"}
             pillName={"Add Expenses"}
-            activeClass={active === 1 ? "active" : ""}
+            activeclassName={active === 1 ? "active" : ""}
             activeHandler={activeHandler}
           ></SideBarListItem>
           <SideBarListItem
             id={2}
             iconName={"analytics"}
             pillName={"analytics"}
-            activeClass={active === 2 ? "active" : ""}
+            activeclassName={active === 2 ? "active" : ""}
             activeHandler={activeHandler}
-          ></SideBarListItem>
+          ></SideBarListItem> */}
         </ul>
       </div>
     </div>

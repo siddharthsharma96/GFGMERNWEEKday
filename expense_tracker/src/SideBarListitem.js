@@ -2,7 +2,7 @@ const SideBarListItem = ({
   id,
   iconName,
   pillName,
-  activeClass,
+  activeclassName,
   activeHandler,
 }) => {
   // const handler = (e, index = 0) => {
@@ -14,8 +14,8 @@ const SideBarListItem = ({
         activeHandler(id);
       }}
     >
-      <a class={activeClass} href="javascript:void(0)">
-        <span class="material-icons">{iconName}</span>
+      <a className={activeclassName} href="javascript:void(0)">
+        <span className="material-icons">{iconName}</span>
         <span>{pillName}</span>
       </a>
     </li>
